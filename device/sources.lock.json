@@ -1,0 +1,25 @@
+{
+  "source_index": "https://archive.debian.org/debian/dists/jessie/main/source/Sources.gz",
+  "files": [
+    {
+      "filename": "iptables_1.4.21-2.dsc",
+      "url": "https://archive.debian.org/debian/pool/main/i/iptables/iptables_1.4.21-2.dsc",
+      "sha256": "ac0f4c15a35bef78b898bf33e042b80273c29204d9dc83e9e28973f54d9884f8"
+    },
+    {
+      "filename": "iptables_1.4.21.orig.tar.bz2",
+      "url": "https://archive.debian.org/debian/pool/main/i/iptables/iptables_1.4.21.orig.tar.bz2",
+      "sha256": "52004c68021da9a599feed27f65defcfb22128f7da2c0531c0f75de0f479d3e0"
+    },
+    {
+      "filename": "iptables_1.4.21-2.debian.tar.xz",
+      "url": "https://archive.debian.org/debian/pool/main/i/iptables/iptables_1.4.21-2.debian.tar.xz",
+      "sha256": "24989003f67257f254c028731918ee445f2dd40fb6e7e5c55a77cc918212ea31"
+    },
+    {
+      "filename": "TAILSCALE-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/tailscale/tailscale/v1.104.2/LICENSE",
+      "sha256": "a7ca6186a7963a0a60740f6047760eecd7a0234e8c38bd7e1e0bbcb324bda45b"
+    }
+  ]
+}

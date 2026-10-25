@@ -1,0 +1,93 @@
+{
+  "schema": 1,
+  "files": {
+    "brand/source/KoBOLD_Tunnel_Hero_Kobo_Libra_Colour_No_Text.png": {
+      "sha256": "d147a6e9790aeba5c4913d63ae744a77c93e6d5c75fc6a44e3b172632d1418c9",
+      "bytes": 2285254
+    },
+    "brand/source/Magical Secure Reading Passage.png": {
+      "sha256": "b41649d79bde0eb2f2bf03410af2e6d5d5814cd2f2b883815c12e172357d8054",
+      "bytes": 2607731
+    },
+    "brand/source/Whimsical E-Reader Knowledge Tunnel.png": {
+      "sha256": "b572fd7a8b79fd3febbb09545a45a1ab820834fb4e2fd741a55e656a69f30216",
+      "bytes": 2581577
+    },
+    "brand/source/cards/01-your-kobo-card.png": {
+      "sha256": "25f688865527ba24489b748108bd0bb52a87a2cfbdeee8c8b74215e45249c7d1",
+      "bytes": 1958094
+    },
+    "brand/source/cards/02-tailscale-card.png": {
+      "sha256": "582a63b74b142289b55b01d08fd71d7249c714d6398eb0e7318e006b6bcf0d73",
+      "bytes": 2096655
+    },
+    "brand/source/cards/03-calibre-web-card.png": {
+      "sha256": "8480e56bc677eba9a328ee8f2427c833fb78ddb1b9b251574a316807bb7498ed",
+      "bytes": 2031864
+    },
+    "brand/source/kobold-app-icon.png": {
+      "sha256": "c0892a3beb053cc05873d1b331c099c2cab68a24754d3ac1065045253152bb1d",
+      "bytes": 1933172
+    },
+    "brand/source/kobold-banner-hero.png": {
+      "sha256": "ea634fadb2fff06dd4b6d56bd3a3dbc3492ddd6dabdc4716587ef756d22948dc",
+      "bytes": 2124144
+    },
+    "brand/source/kobold-favicon-source.png": {
+      "sha256": "6c12bff256b4e5f6b5121b88a8d2a9bc974b28b2628a91284e9028f79046a0ab",
+      "bytes": 1444754
+    },
+    "brand/source/kobold-logo-emblem.png": {
+      "sha256": "db59b20bb37c22b35fb3a5b8ddeb2345448faea3c22d577ecd6be22bef814ee6",
+      "bytes": 1754565
+    },
+    "brand/source/kobold-opengraph-social.png": {
+      "sha256": "ca3c309328b0ee444ff754d06b633f493c56782b278aa523f5cced86c748cb59",
+      "bytes": 1560967
+    },
+    "brand/typography/OFL-NotoSerifDisplay.txt": {
+      "sha256": "5e0da210fb04058a8c0087985d2d456b931c2579811a49655721d3cf0c36b6d6",
+      "bytes": 4350
+    },
+    "brand/typography/README.md": {
+      "sha256": "27dbd255f51512003041d0a8c664809c1598684ede18f3245db73b0d98f44e37",
+      "bytes": 1518
+    },
+    "brand/typography/display/README.md": {
+      "sha256": "47ddb5282753ac98b8ff55ce623aa68134dbf7836e3deadb8fc9987b319b6be9",
+      "bytes": 3201
+    },
+    "brand/typography/display/build_kobold_display_v2.py": {
+      "sha256": "650833e3ec53946d15bc110226c75a1a361a7d56f0c1fd581d69da41682f122c",
+      "bytes": 19914
+    },
+    "brand/typography/display/forest_green_serif_typeface_specimen.png": {
+      "sha256": "c3c526b7ca205f0d27c45d36870c90e5538563f14e2f22cbd004a24403e6fcba",
+      "bytes": 815198
+    },
+    "brand/typography/display/requirements.txt": {
+      "sha256": "652404a154c1c2e35eba964ee133ba97b2d16bbcaa3826cb15d806444f5be724",
+      "bytes": 110
+    },
+    "brand/typography/requirements.lock": {
+      "sha256": "8e47cc1cfd19bdeb5eab6b50e7632a7eb362c12729b52f3899d2db23b5c4ad24",
+      "bytes": 136
+    },
+    "brand/typography/story/README.md": {
+      "sha256": "1c604c19c3e0bb2dd7af98fa35ca3f1780d2cfd5a4f7acca3bbccb848615c913",
+      "bytes": 648
+    },
+    "brand/typography/story/SOURCE_AND_LICENSE.md": {
+      "sha256": "4f88f00e946f2d470726ed1087ff2b0dc784360fdd0f3e75169657128406532c",
+      "bytes": 935
+    },
+    "brand/typography/story/build_kobold_story_serif.py": {
+      "sha256": "cd882a779d619125139b9fa0ed016953f034b8fafa3b3fe55de0b67f64b11ac9",
+      "bytes": 7045
+    },
+    "brand/typography/upstream.json": {
+      "sha256": "4adcf5ac0ddad3ae5fe0ebefbe2082613a7ee2745a84a27bddc8ee96f8b4c0aa",
+      "bytes": 900
+    }
+  }
+}

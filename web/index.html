@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <title>KoBOLD · Kobo setup</title>
+  <link rel="icon" href="assets/images/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="assets/images/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="apple-touch-icon" href="assets/images/favicon-180.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="wizard.css?v=20261026-compact2">
+  <script type="module" src="wizard.js?v=20261026-compact2"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wizard-shell">
+  <aside class="wizard-sidebar">
+    <a class="wizard-brand" href="#overview"><img src="assets/images/app-icon-96.webp" width="48" height="48" alt=""><span><span class="wizard-wordmark">Ko<span>BOLD</span></span><span class="wizard-subtitle">The Kobold’s Tunnel</span></span></a>
+    <nav aria-label="Setup progress"><ol id="wizard-steps"></ol></nav>
+    <div class="wizard-side-links"><button id="open-management" class="text-button" type="button">Existing installation</button><button id="open-recovery" class="text-button" type="button">Recovery</button><a href="guide.html">Help and privacy</a></div>
+  </aside>
+  <div class="wizard-workspace">
+    <header class="wizard-header"><span id="device-label">No Kobo selected</span><label class="wizard-log-toggle"><input id="show-log" type="checkbox">Show diagnostic log</label><div id="storage-notice" class="wizard-storage-notice" hidden><span id="storage-warning" role="status"></span> <button id="export-storage-log" class="text-button" type="button">Export report</button></div></header>
+    <main id="main" tabindex="-1">
+      <aside id="preview-notice" class="callout" hidden><p>This site provides Kobo backups and Tailscale policy review. Installation, updates and device status checks are unavailable.</p></aside>
+      <aside id="browser-notice" class="callout" hidden><h2>File access unavailable</h2><p>Open KoBOLD in desktop Chrome, Edge or another browser with folder access. Firefox and Zen cannot back up or install Kobo files here. You can review the example policy.</p></aside>
+
+      <section id="overview">
+        <img class="overview-banner" src="assets/images/banner-1280.webp" srcset="assets/images/banner-640.webp 640w, assets/images/banner-1280.webp 1280w, assets/images/banner-1920.webp 1920w" sizes="(max-width:760px) 90vw, 1000px" width="1280" height="427" alt="KoBOLD, The Kobold’s Tunnel">
+        <p class="eyebrow">CALIBRE-WEB &amp; TAILSCALE</p><h1>Set up Kobo sync.</h1><p class="lede">Use Tailscale to connect your Kobo to your Calibre-Web library.</p>
+        <div class="hero-actions"><button id="get-started" class="primary">Get started</button><button id="example-policy" class="text-button">Review an example policy</button></div>
+        <div class="explainer-cards">
+          <article><img src="assets/images/your-kobo-432.webp" width="866" height="808" alt="" loading="lazy"><div><h2>Your Kobo</h2><p>Sync books from Calibre-Web on your Kobo.</p></div></article>
+          <article><img src="assets/images/tailscale-432.webp" width="866" height="808" alt="" loading="lazy"><div><h2>Tailscale</h2><p>Connect your Kobo to your server through Tailscale.</p></div></article>
+          <article><img src="assets/images/calibre-web-432.webp" width="866" height="808" alt="" loading="lazy"><div><h2>Calibre-Web</h2><p>Keep your library on your Calibre-Web server.</p></div></article>
+        </div>
+        <section class="card"><h2>Models and firmware</h2><p>Kobo Libra Colour · Firmware 4.46.23836.</p><p id="availability">Checking installation availability…</p></section>
+      </section>
+      <section id="wizard-current" hidden aria-labelledby="task-title">
+        <img id="installation-banner" class="wizard-installation-banner" src="assets/images/banner-1280.webp" srcset="assets/images/banner-640.webp 640w, assets/images/banner-1280.webp 1280w, assets/images/banner-1920.webp 1920w" sizes="(max-width:760px) calc(100vw - 40px), (max-width:1214px) calc(100vw - 246px), 968px" width="1280" height="427" alt="KoBOLD, The Kobold’s Tunnel" hidden>
+        <div class="page-intro"><div><p id="step-label" class="eyebrow"></p><h1 id="task-title"></h1><p id="task-instruction" class="lede"></p></div><img id="stage-art" class="step-art" width="640" height="274" alt=""></div>
+
+        <section id="current-task" class="card"><h2 id="operation-title"></h2><p id="operation-instruction" class="wizard-operation-instruction"></p>
+          <div id="management-options" hidden><h2>Manage this installation</h2><p id="managed-status"></p><div class="wizard-secondary-actions"><button id="read-status" class="text-button">Read Kobo status</button><button id="manage-recovery" class="text-button" type="button">Recovery</button><button id="prepare-update" class="secondary">Update installation</button><button id="continue-setup" class="secondary" hidden>Continue connection setup</button></div></div>
+          <div id="recovery-options" hidden><h2>Recovery actions</h2><p>Read the existing result before preparing another action. Unknown installations are not adopted or overwritten.</p><div class="wizard-secondary-actions"><button id="repair-files" class="secondary">Restore missing installer files</button><button id="disable-startup" class="secondary">Disable automatic startup</button><button id="remove-startup" class="secondary">Remove automatic startup</button></div></div>
+          <p id="network-summary" hidden></p><button id="edit-settings" class="text-button" hidden>Edit settings</button>
+          <form id="network-form" hidden novalidate>
+            <div class="form-grid">
+              <label>Calibre-Web server Tailscale IPv4 address<input id="ip" name="ip" placeholder="100.x.x.x" autocomplete="off" required><small>Find this address on the server’s Tailscale device page.</small></label>
+              <label>Allowed TCP ports<input id="ports" name="ports" value="8083" required><small>Use your Calibre-Web port. Separate multiple ports with commas.</small></label>
+              <label>Reader hostname<input id="hostname" name="hostname" value="kobo-reader" spellcheck="false" autocapitalize="none" required><small>Spaces become dashes; letters become lowercase.</small></label>
+              <label>Device tag<input id="tag" name="tag" value="tag:kobo-sync" required><small>Use this tag when approving the Kobo in Tailscale.</small></label>
+              <label>Tag owner<input id="owner" name="owner" value="autogroup:admin" required><small>Use an admin autogroup, existing group or account email.</small></label>
+              <label>Additional deny tests <span class="optional">optional</span><input id="extra-deny" name="extra-deny" placeholder="100.x.x.x:22"><small>IPv4:port destinations, separated by commas. These are tests, not blocking rules.</small></label>
+            </div>
+            <h2>Current Tailscale policy</h2><p>Sign in to the account containing your server. <a href="https://console.tailscale.com/admin/acls/file" target="_blank" rel="noopener noreferrer">Open the JSON policy editor ↗</a> and copy the complete policy, including comments.</p><p><a href="guide.html#backup-tailscale-policy" target="_blank" rel="noopener noreferrer">Save a backup before changing the policy ↗</a>. Use <code>{}</code> only for an intentionally empty policy.</p>
+            <label for="original-policy" class="sr-only">Current policy</label><textarea id="original-policy" name="original-policy" rows="8" spellcheck="false"></textarea>
+            <label class="check"><input id="rewrite" type="checkbox">Replace wildcard sources with autogroup:member.<span class="check-detail">This removes those rules’ access for all tagged devices. Review the effect on other tagged devices.</span></label>
+          </form>
+          <section id="policy-review" hidden>
+            <div class="card-heading"><h2>Review the proposed policy</h2><div class="copy-feedback"><button id="copy-policy" class="secondary">Copy JSON</button><span id="copy-policy-status" role="status" aria-live="polite"></span></div></div>
+            <p id="policy-findings"></p><label class="sr-only" for="proposed-policy">Proposed policy</label><textarea id="proposed-policy" rows="10" readonly spellcheck="false"></textarea>
+            <p>Review the full proposal. Grants are additive. Validate the policy and its tests in Tailscale before saving.</p><a href="https://console.tailscale.com/admin/acls/file" target="_blank" rel="noopener noreferrer">Open the Tailscale JSON policy editor ↗</a>
+            <label class="check"><input id="policy-ack" type="checkbox">I reviewed and saved the policy, and Tailscale accepted its tests.</label>
+          </section>
+          <p id="action-message" role="status" aria-live="polite"></p><div id="action-error" role="alert" hidden></div>
+          <div id="wizard-progress" class="wizard-progress" hidden aria-busy="false">
+            <strong id="progress-phase"></strong><div class="wizard-meter"><progress id="progress-bar" max="1" aria-label="Current operation progress"></progress><span id="progress-percent"></span></div>
+            <div id="progress-file" class="wizard-file"></div><div id="progress-file-bytes"></div><div id="progress-count"></div><div id="progress-bytes"></div>
+          </div>
+          <div id="device-inline" class="wizard-device-inline" hidden><p id="device-inline-text"></p><button id="show-device-instructions" class="text-button">Show instructions</button></div>
+          <div class="wizard-primary-row"><button id="wizard-primary" class="primary" disabled>Loading</button><button id="cancel-operation" class="text-button" hidden>Cancel backup</button></div>
+          <div id="reader-options" hidden><button id="another-backup" class="text-button">Create another backup</button><details id="skip-options" hidden><summary>Continue without a matching Kobo backup</summary><p>This increases the risk of losing books, settings or reading progress. A separate system backup is still required.</p><button id="skip-backup" class="secondary">Review backup risk</button></details></div>
+          <button id="collection-files-link" class="text-button" hidden>View collection package files</button>
+        </section>
+        <details id="installation-details" class="wizard-installation-details"><summary>Installation details</summary><div id="completed-summary" class="wizard-completed" aria-label="Completed steps"></div>
+        <div id="folder-summary" class="wizard-folder-summary"></div></details>
+      </section>
+      <section id="diagnostic-panel" class="wizard-diagnostics" hidden aria-labelledby="diagnostic-title"><div class="wizard-diagnostic-header"><h2 id="diagnostic-title">Diagnostic log</h2><label>Session<select id="log-session"></select></label><button id="copy-log" class="secondary">Copy bug report</button><button id="download-log" class="secondary">Download bug report</button><button id="clear-logs" class="text-button">Clear diagnostic logs</button></div><p id="log-feedback" role="status" aria-live="polite"></p><pre id="diagnostic-log"></pre></section>
+    </main>
+    <footer><span>KoBOLD · Version 0.1.0</span><a href="guide.html">Compatibility, privacy &amp; recovery</a><a href="guide.html#legal-notices">Legal notices &amp; licensing</a></footer>
+  </div>
+</div>
+<dialog id="wizard-device-dialog" aria-labelledby="device-dialog-title"><img id="device-dialog-art" width="320" height="137" alt=""><h2 id="device-dialog-title"></h2><ol id="device-instructions"></ol><p>Reconnect the same reader. If folder access is lost, select it again. The result will be verified after your confirmation.</p><label class="check"><input id="device-ack" type="checkbox"><span id="device-ack-text"></span></label><div class="button-row"><button id="close-device-dialog" class="secondary">Back to instructions</button><button id="device-next" class="primary" disabled>Next</button></div></dialog>
+<dialog id="wizard-consent" aria-labelledby="consent-title"><h2 id="consent-title"></h2><p id="consent-description"></p><label class="check"><input id="consent-ack" type="checkbox"> <span id="consent-ack-text">I approve these changes to the selected Kobo.</span></label><div class="button-row"><button id="consent-cancel" class="secondary">Go back</button><button id="consent-accept" class="primary" disabled>Proceed</button></div></dialog>
+<dialog id="collection-files-dialog" aria-labelledby="collection-files-title"><h2 id="collection-files-title">Collection package files</h2><pre id="collection-files"></pre><button id="close-collection-files" class="secondary">Close</button></dialog>
+<noscript><p>Enable JavaScript to use KoBOLD. No files are changed while JavaScript is disabled.</p></noscript>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "commit": "e83e28b3d3a31775e843d142bfd79b26afccc9ba",
+  "files": [
+    {
+      "file": "NotoSerifDisplay[wdth,wght].ttf",
+      "url": "https://raw.githubusercontent.com/google/fonts/e83e28b3d3a31775e843d142bfd79b26afccc9ba/ofl/notoserifdisplay/NotoSerifDisplay%5Bwdth%2Cwght%5D.ttf",
+      "sha256": "4b661adcf6a5d38bf5befdc4d976e8a7238a4aeb57e62c1c1a67775380a09df9"
+    },
+    {
+      "file": "OFL.txt",
+      "url": "https://raw.githubusercontent.com/google/fonts/e83e28b3d3a31775e843d142bfd79b26afccc9ba/ofl/notoserifdisplay/OFL.txt",
+      "sha256": "5e0da210fb04058a8c0087985d2d456b931c2579811a49655721d3cf0c36b6d6"
+    },
+    {
+      "file": "METADATA.pb",
+      "url": "https://raw.githubusercontent.com/google/fonts/e83e28b3d3a31775e843d142bfd79b26afccc9ba/ofl/notoserifdisplay/METADATA.pb",
+      "sha256": "ed72f12e28f8777fa21f3ab54db2860d01f267c79fadcb5734d6b5690b604e01"
+    }
+  ]
+}

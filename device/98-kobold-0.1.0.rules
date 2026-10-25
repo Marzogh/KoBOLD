@@ -1,0 +1,3 @@
+# Legacy KoBOLD integration: fixed events invoke the versioned bootstrap.
+KERNEL=="loop0", ACTION=="add", RUN+="/bin/sh /usr/local/kobold-0.1.0/bootstrap.sh"
+KERNEL=="wlan*", ACTION=="add", RUN+="/bin/sh /usr/local/kobold-0.1.0/bootstrap.sh"

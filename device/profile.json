@@ -1,0 +1,8 @@
+{
+  "id":"libra-colour-390-4.46.23836", "model":"Kobo Libra Colour", "deviceCode":"390",
+  "firmware":"4.46.23836", "kernelPrefix":"4.9.77", "architecture":"armv7l",
+  "clientEvidence":{"date":"2026-10-25","method":"owner-attended manual install","sync":true,"reboot":true,"otherInternetConnection":true},
+  "bootstrapAccepted":false,
+  "bootstrapEvidence":null,
+  "note":"The new USB bootstrap, privileged backup round-trip and recovery package require attended hardware acceptance. No UI override. Firmware-update survival is not promised."
+}

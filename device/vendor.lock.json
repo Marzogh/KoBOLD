@@ -1,0 +1,24 @@
+{
+  "tailscale": {
+    "version": "1.104.2",
+    "url": "https://pkgs.tailscale.com/stable/tailscale_1.104.2_arm.tgz",
+    "sha256": "b694ff9c67235da98798b9592a0cc900bc9d1613041f77722ec9bf4ce2d215cf",
+    "checksum_source": "https://pkgs.tailscale.com/stable/tailscale_1.104.2_arm.tgz.sha256"
+  },
+  "firewall": {
+    "version": "1.4.21-2+b1",
+    "format": "deb",
+    "url": "https://archive.debian.org/debian/pool/main/i/iptables/iptables_1.4.21-2+b1_armhf.deb",
+    "sha256": "5ef4031481deef0c44d97e00a1f76de4f4c69ea96fe5f29d7afbf6a969ceac78",
+    "checksum_source": "https://archive.debian.org/debian/dists/jessie/main/binary-armhf/Packages.gz",
+    "provenance": "Official Debian Jessie ARMv7 hard-float package. Archived legacy dependencies, not currently security-maintained. Private payload only; native Kobo acceptance required."
+  },
+  "firewall_xtables": {
+    "version": "1.4.21-2+b1",
+    "format": "deb",
+    "url": "https://archive.debian.org/debian/pool/main/i/iptables/libxtables10_1.4.21-2+b1_armhf.deb",
+    "sha256": "d96d5b61b1d329df3d65410f894d536ba39819161304c1fdba2957650a1c970b",
+    "checksum_source": "https://archive.debian.org/debian/dists/jessie/main/binary-armhf/Packages.gz",
+    "provenance": "Official Debian Jessie ARMv7 hard-float package. Archived legacy dependencies, not currently security-maintained. Private payload only; native Kobo acceptance required."
+  }
+}

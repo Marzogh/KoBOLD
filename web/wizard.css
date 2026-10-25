@@ -1,0 +1,62 @@
+/* Warm surfaces and copper progress accents follow the supplied artwork. */
+:root{--paper:#f5efe3;--card:#fffbf2;--ink:#244734;--muted:#70634f;--line:#dbcfb8;--green:#214f3b;--amber:#995817;--copper:#af6928}
+.wizard-shell{display:grid;grid-template-columns:230px minmax(0,1fr);min-height:100vh}
+.wizard-sidebar{background:#ece2ce;padding:28px 20px;border-right:1px solid var(--line);display:flex;flex-direction:column}
+.wizard-brand{display:flex;align-items:center;gap:10px;text-decoration:none;margin-bottom:34px}.wizard-brand img{border-radius:9px;flex-shrink:0}.wizard-wordmark{font:600 30px/1.1 'KoBOLD Display',Georgia,serif;font-feature-settings:'ss01' 1}.wizard-wordmark>span{color:var(--amber)}.wizard-subtitle{display:block;font:400 12px/1.5 var(--serif);margin-top:6px}
+.wizard-sidebar nav ol{list-style:none;padding:0;margin:0}.wizard-sidebar nav li{margin:0 0 8px}.wizard-sidebar nav button{background:none;border:1px solid transparent;border-left:3px solid transparent;color:var(--ink);text-align:left;width:100%;padding:12px;font:inherit;border-radius:5px}.wizard-sidebar nav button[aria-current=step]{background:#f5dca9;border-left-color:var(--copper)}.wizard-sidebar nav small{display:block;color:var(--muted);font-size:12px;margin-top:3px}.wizard-side-links{display:flex;flex-direction:column;align-items:flex-start;gap:6px;margin-top:auto;padding-top:30px;font-size:14px}
+.wizard-workspace{min-width:0}.wizard-header{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 5%;border-bottom:1px solid var(--line)}.wizard-log-toggle{display:flex;align-items:center;gap:9px}.wizard-log-toggle input{accent-color:var(--green);width:18px;height:18px}.wizard-workspace main{padding:32px 5%;max-width:1250px}.wizard-workspace footer{padding-left:5%;padding-right:5%;flex-wrap:wrap}
+.wizard-completed{display:flex;gap:10px 22px;flex-wrap:wrap;color:var(--muted);font-size:12px;margin-bottom:20px}.wizard-folder-summary{display:flex;flex-wrap:wrap;gap:12px 24px;color:var(--muted);font-size:12px;margin-bottom:18px;overflow-wrap:anywhere}.wizard-folder-summary button{padding:4px 0;font-size:12px}
+#current-task{padding:26px}.wizard-primary-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;min-height:50px;margin-top:16px}.wizard-primary-row>.primary{min-width:190px}.wizard-secondary-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px}#action-message{min-height:1.6em;white-space:pre-line}#action-error{padding:14px 18px;background:#f8e8df;border-left:3px solid var(--error);color:var(--error);white-space:pre-wrap;overflow-wrap:anywhere;margin-bottom:18px}
+/* Text wraps within reserved rows. Telemetry never sizes the bar or its controls. */
+.wizard-progress{width:100%;height:236px;padding:18px 0;color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums}.wizard-progress strong{display:block;color:var(--ink);height:44px;overflow:auto;font-size:14px}.wizard-meter{display:grid;grid-template-columns:minmax(0,1fr) 45px;gap:12px;align-items:center;margin:8px 0 12px}.wizard-meter progress{width:100%;height:12px;accent-color:var(--copper);display:block}.wizard-file{height:42px;overflow:auto;overflow-wrap:anywhere;color:var(--ink);font-size:14px}.wizard-progress>div:not(.wizard-meter):not(.wizard-file){height:23px;overflow:auto}.wizard-device-inline{padding:12px 18px;background:#f5e8cc;border-left:3px solid var(--copper);margin-top:16px}
+#reader-options{margin-top:12px}#skip-options{margin-top:14px}#network-form h2{margin-top:26px}.wizard-diagnostics{border-top:1px solid var(--line);margin-top:28px;padding-top:22px}.wizard-diagnostic-header{display:flex;gap:12px;flex-wrap:wrap;align-items:center}.wizard-diagnostic-header h2{margin:0 auto 0 0}.wizard-diagnostic-header label{font-size:12px}.wizard-diagnostic-header select{display:block;max-width:220px;padding:8px;background:var(--card);color:var(--ink);border:1px solid var(--line);font:inherit}#diagnostic-log{background:#eee5d5;color:#3f493a;padding:18px;border-radius:6px;white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.8 ui-monospace,SFMono-Regular,Consolas,monospace;max-height:400px;overflow:auto}#log-feedback{min-height:1.6em;font-size:12px}
+#wizard-device-dialog{max-width:560px}#device-dialog-art{display:block;max-width:100%;height:auto;max-height:140px;object-fit:contain;margin:0 auto 20px;border-radius:5px}#wizard-device-dialog li{margin-bottom:10px}#wizard-consent .check{align-items:flex-start}.wizard-log-toggle{white-space:nowrap}.wizard-workspace .overview-banner{max-height:32vh}
+@media(max-width:1000px){.wizard-shell{grid-template-columns:190px minmax(0,1fr)}.wizard-sidebar{padding:24px 12px}.wizard-brand{gap:7px}.wizard-brand img{width:38px;height:38px}.wizard-wordmark{font-size:26px}.wizard-subtitle{font-size:11px}.wizard-header{flex-wrap:wrap}.wizard-primary-row>.primary{min-width:0}}
+@media(max-width:760px){.wizard-shell{grid-template-columns:1fr}.wizard-sidebar{padding:18px}.wizard-brand{margin-bottom:16px}.wizard-sidebar nav ol{display:flex;gap:8px;overflow-x:auto;padding:4px}.wizard-sidebar nav li{flex:0 0 auto}.wizard-sidebar nav button{width:auto;white-space:nowrap;padding:8px;font-size:12px}.wizard-sidebar nav small{display:none}.wizard-side-links{flex-direction:row;flex-wrap:wrap;align-items:center;gap:18px;padding-top:8px}.wizard-side-links .text-button{font-size:12px}.wizard-side-links a{font-size:12px}.wizard-header{padding:14px 5%}.wizard-header>span{font-size:12px}.wizard-workspace main{padding-top:24px}#current-task{padding:20px}.wizard-primary-row>.primary{width:100%}.wizard-diagnostic-header{align-items:flex-start}.wizard-progress{height:250px}.wizard-progress strong{height:50px}.wizard-file{height:50px}}
+
+.wizard-shell>*{min-width:0}.wizard-sidebar nav{display:block;min-width:0;max-width:100%;overflow:hidden}.wizard-sidebar nav ol{max-width:100%}.wizard-emblem{max-width:140px;justify-self:end}
+/* Match the approved mockup's type scale and compact shell proportions. */
+.wizard-shell{grid-template-columns:190px minmax(0,1fr);font-size:14px;line-height:1.6}
+.wizard-sidebar{padding:24px 16px}.wizard-brand{margin-bottom:32px}.wizard-wordmark{font-size:27px}.wizard-subtitle{font-size:12px}.wizard-sidebar nav button{font-size:14px}
+.wizard-header{min-height:76px;padding:17px 28px}.wizard-workspace main{max-width:1100px;padding:28px}.wizard-workspace h1{font-size:39px;line-height:1.15;letter-spacing:0;margin:8px 0 14px}.wizard-workspace h2{font-size:25px;line-height:1.25}.wizard-workspace .lede{font-size:14px;line-height:1.6}.wizard-workspace .page-intro{grid-template-columns:minmax(0,1fr) 32%;gap:22px;margin-bottom:25px}.wizard-completed{margin-bottom:18px}#current-task{padding:22px}.wizard-progress{height:178px;padding-top:16px}.wizard-progress strong{height:24px}.wizard-file{height:22px}.wizard-progress>div:not(.wizard-meter):not(.wizard-file){height:21px}.wizard-primary-row{margin-top:12px}.wizard-workspace .card p{font-size:14px}
+@media(max-width:760px){.wizard-shell{grid-template-columns:1fr}.wizard-sidebar{padding:18px}.wizard-header{padding:14px 20px}.wizard-workspace main{padding:20px}.wizard-workspace h1{font-size:33px}.wizard-workspace .page-intro{grid-template-columns:1fr}.wizard-workspace .page-intro img{max-width:300px}#current-task{padding:20px}.wizard-progress{height:204px}.wizard-progress strong{height:42px}.wizard-file{height:38px}}
+.wizard-completed:empty,.wizard-folder-summary:empty,#operation-title:empty,#operation-instruction:empty,#action-message:empty{display:none}
+.wizard-workspace main{max-width:1024px}.wizard-primary-row>.primary{width:auto;min-width:190px;max-width:100%;padding:9px 15px;min-height:44px}.wizard-secondary-actions>.secondary{padding:9px 15px;min-height:44px}.wizard-operation-instruction{margin:8px 0;color:var(--muted)}
+.wizard-meter progress{appearance:none;-webkit-appearance:none;background:#eadfc8;border:0;border-radius:5px;overflow:hidden;height:10px}
+.wizard-meter progress::-webkit-progress-bar{background:transparent;border:0}
+.wizard-meter progress::-webkit-progress-value{background:var(--copper);border-radius:5px}
+.wizard-meter progress::-moz-progress-bar{background:var(--copper);border-radius:5px}
+.wizard-meter progress:not([value]){background:repeating-linear-gradient(110deg,#eadfc8 0,#eadfc8 16px,#c38b4d 16px,#c38b4d 32px)}
+/* Existing-installation summaries are not unfinished installation forms. */
+#current-task:has(#management-options:not([hidden])) .wizard-secondary-actions{margin:16px 0 0}
+
+.wizard-progress.wizard-progress-readonly{height:112px;padding-top:12px}
+.wizard-workspace .page-intro{margin-bottom:18px}.wizard-completed{margin-bottom:12px}.wizard-folder-summary{margin-bottom:16px}
+
+/* Compact desktop controls; keep touch hit targets usable on coarse pointers. */
+.wizard-primary-row>.primary,.wizard-secondary-actions>.secondary,.wizard-workspace .secondary,#wizard-device-dialog button,#wizard-consent button,#collection-files-dialog button{min-width:0;width:auto;min-height:34px;padding:6px 12px;font-size:13px;line-height:1.4;border-radius:4px}
+.wizard-primary-row{gap:12px;min-height:34px;margin-top:16px}.wizard-workspace .text-button{font-size:13px;padding:5px 0}.wizard-folder-summary .text-button{font-size:12px;padding:2px 0}.wizard-secondary-actions{gap:14px;align-items:center}.wizard-diagnostic-header{gap:10px}
+#wizard-consent .button-row button,#wizard-device-dialog .button-row button{flex:0 1 auto}.wizard-side-links{gap:4px}
+@media(pointer:coarse){.wizard-primary-row>.primary,.wizard-secondary-actions>.secondary,.wizard-workspace .secondary,#wizard-device-dialog button,#wizard-consent button{min-height:44px}}
+@media(max-width:760px){.wizard-side-links{gap:10px 18px}}
+/* Unknown totals show activity rather than an invented percentage. */
+.wizard-progress[aria-busy=true] progress:not([value]){background-color:#eadfc8;background-image:linear-gradient(90deg,transparent,var(--copper),transparent);background-size:36% 100%;background-repeat:no-repeat;animation:wizard-indeterminate 1.25s linear infinite}
+@keyframes wizard-indeterminate{from{background-position:-60% 50%}to{background-position:160% 50%}}
+@media(prefers-reduced-motion:reduce){.wizard-progress[aria-busy=true] progress:not([value]){animation:none;background-position:50% 50%}}
+
+/* Keep the installed summary focused on status and its available actions. */
+.wizard-header{flex-wrap:wrap}.wizard-storage-notice{flex-basis:100%;font-size:12px;color:var(--amber);display:flex;align-items:baseline;gap:12px}.wizard-storage-notice .text-button{white-space:nowrap;text-decoration:underline}
+.wizard-installation-details{border-top:1px solid var(--line);margin:0 0 18px;padding:10px 0;font-size:13px;color:var(--muted)}.wizard-installation-details>summary{cursor:pointer;color:var(--ink);width:fit-content}.wizard-installation-details[open]>summary{margin-bottom:12px}.wizard-installation-details .wizard-folder-summary{margin-bottom:0}.wizard-installation-details .wizard-completed{gap:8px 20px}
+.wizard-existing #step-label,.wizard-existing #management-options>h2,.wizard-existing #managed-status{display:none}
+.wizard-existing #current-task{background:none;border:0;box-shadow:none;padding:0;margin:0}
+.wizard-existing #management-options .wizard-secondary-actions{margin:0;gap:20px}
+.wizard-existing .wizard-primary-row:has(>#wizard-primary[hidden]):has(>#cancel-operation[hidden]){display:none}
+.wizard-existing #read-status{text-decoration:underline}.wizard-existing #manage-recovery{text-decoration:underline}
+
+.wizard-existing{display:flex;flex-direction:column}.wizard-existing .page-intro{order:0}.wizard-existing #current-task{order:1;margin-bottom:16px}.wizard-existing .wizard-installation-details{order:2}
+
+/* The installed summary uses the full hero above its status and actions. */
+.wizard-installation-banner{display:block;order:-1;width:100%;height:auto;border-radius:8px;margin-bottom:22px}
+.wizard-existing .page-intro{grid-template-columns:minmax(0,1fr)}
+
+@media(max-width:760px){.wizard-shell{grid-template-rows:auto 1fr}}

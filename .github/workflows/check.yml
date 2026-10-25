@@ -1,0 +1,25 @@
+name: Local checks
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '20'
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - run: python3 tools/prepare_toolchain.py --download
+      - run: npm test
+      - run: python3 tools/build.py --download
+      - run: python3 tools/prepare_sources.py --download
+      - run: python3 tools/export_public.py --kind site --preview --output cache/pages-preview
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: static-preview
+          path: cache/pages-preview
+# CI builds native candidates for validation but uploads only the static preview.

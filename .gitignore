@@ -1,0 +1,12 @@
+cache/
+web/releases/
+__pycache__/
+.DS_Store
+coverage/
+test-results/
+*.log
+
+web/dev/
+web/backup-check.html
+
+web/collection/
