@@ -1,12 +1,37 @@
 # KoBOLD: The Kobold’s Tunnel
 
+![KoBOLD: The Kobold’s Tunnel](web/assets/images/banner-1280.webp)
+
+<p align="center">
+  <a href="https://chipsncode.com/KoBOLD/"><strong>Open the installer</strong></a>
+  &nbsp; · &nbsp; <a href="docs/USER-GUIDE.md">User guide</a>
+  &nbsp; · &nbsp; <a href="https://github.com/Marzogh/KoBOLD/releases/latest">Download release</a>
+</p>
+
 KoBOLD installs Tailscale on a supported Kobo so it can sync with a private
 Calibre-Web server over any internet connection. Setup runs in a desktop browser
 and transfers files over USB. No public Calibre-Web endpoint or hosted application
 backend is required.
 
-[Open the installer](https://chipsncode.com/KoBOLD/) or read the
-[user guide](docs/USER-GUIDE.md).
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="web/assets/images/your-kobo-432.webp" width="200" alt="Kobo reader connected by USB"><br>
+      <strong>Back up your Kobo</strong><br>
+      Save books and settings to a folder on your computer.
+    </td>
+    <td align="center" width="33%">
+      <img src="web/assets/images/tailscale-432.webp" width="200" alt="Tailscale connection"><br>
+      <strong>Connect to Tailscale</strong><br>
+      Give the reader access to your sync server.
+    </td>
+    <td align="center" width="33%">
+      <img src="web/assets/images/calibre-web-432.webp" width="200" alt="Calibre-Web library"><br>
+      <strong>Sync with Calibre-Web</strong><br>
+      Sync from home or another internet connection.
+    </td>
+  </tr>
+</table>
 
 ## Requirements
 
@@ -47,13 +72,13 @@ Use the update flow for a recognised KoBOLD installation and the exact release
 that authorises its previous version. It preserves the enrolled Tailscale identity
 and saves recovery records. The current updater covers matching managed controller
 updates; arbitrary Tailscale payload upgrades and firmware changes require further
-support and testing. 
+support and testing.
 
 ## Documentation
 
 - [User guide](docs/USER-GUIDE.md)
 - [Release notes](docs/RELEASE-NOTES.md)
-- [Release review and signing plan](docs/RELEASE-REVIEW.md)
+- [Release verification and signing](docs/RELEASE-REVIEW.md)
 - [Backups](docs/BACKUPS.md) and [recovery](docs/RECOVERY.md)
 - [Security and privacy](docs/SECURITY.md)
 - [Architecture](docs/ARCHITECTURE.md) and [installation receipts](docs/INSTALLATION-PROVENANCE.md)
