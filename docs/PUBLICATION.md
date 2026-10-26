@@ -26,7 +26,7 @@ it from history. Do not push all branches or mirror an existing private reposito
 as a substitute for exporting reviewed source.
 
 The default site export contains only listed application files and assets, with
-empty production trust lists. It is a source preview, not an installable release.
+public verification keys. It is a source preview, not an installable release.
 Generated signed release/collector archives require a separate release review;
 they are not recursively swept into a public site. The root package builder itself
 uses an exact archive member inventory. Keep hardware acceptance, signatures,

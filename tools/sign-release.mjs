@@ -4,7 +4,10 @@ import { createPrivateKey, createPublicKey, sign } from 'node:crypto';
 const [keyFile, input, output, trustFile] = process.argv.slice(2);
 if (!keyFile || !input || !output || !trustFile)
   throw Error('Usage: sign-release.mjs PRIVATE_PEM INPUT OUTPUT TRUST_JSON');
-const key = createPrivateKey(readFileSync(keyFile));
+const key = createPrivateKey({
+  key: readFileSync(keyFile),
+  passphrase: process.env.KOBOLD_SIGNING_PASSPHRASE,
+});
 if (key.asymmetricKeyType !== 'ed25519') throw Error('Ed25519 required');
 const pub = createPublicKey(key)
   .export({ format: 'der', type: 'spki' })

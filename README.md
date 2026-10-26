@@ -6,7 +6,7 @@ and transfers files over USB. No public Calibre-Web endpoint or hosted applicati
 backend is required.
 
 **Release status: 0.1.0 is being prepared for review. The public installer is not
-live.** Production signing and installation acceptance remain closed pending review.
+live.** The production signer is configured. Exact-package installation acceptance is pending.
 
 ## Requirements
 

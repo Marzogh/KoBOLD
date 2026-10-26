@@ -2,7 +2,7 @@
 
 The current profile is Kobo Libra Colour, device code 390, firmware 4.46.23836,
 ARMv7 and kernel 4.9.77. Unknown profiles are blocked. Production bootstrap
-acceptance and signing-key configuration remain closed.
+acceptance remains closed. A production verification key is configured.
 
 An attended development sequence has exercised installation, enrolment, managed
 updates and signed startup verification on this profile. Sync after restart over

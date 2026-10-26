@@ -113,10 +113,9 @@ def signed(data, key, trust):
 
 def helper(root):
     """Cross-compile the fixed ARM helper; do not run it on the build host."""
-    go = (
-        os.environ.get('KOBOLD_GO')
-        or shutil.which('go')
-        or str(ROOT / 'cache/toolchain/go/bin/go')
+    pinned = ROOT / 'cache/toolchain/go/bin/go'
+    go = os.environ.get('KOBOLD_GO') or (
+        str(pinned) if pinned.is_file() else shutil.which('go') or str(pinned)
     )
     with tempfile.TemporaryDirectory() as temp:
         output = Path(temp) / 'provenance'

@@ -64,3 +64,25 @@ python3 tools/package_review.py --output cache/release-review \
 
 Review candidates remain non-installable. Do not deploy their site ZIP as the
 production installer. See [release review](RELEASE-REVIEW.md) for activation steps.
+
+## Production package and Pages deployment
+
+`tools/package_release.py stage` prepares a signed attended installation and its
+acceptance template. Supply an external Ed25519 private key whose public key is in
+both checked-in trust lists. Encrypted PEM keys use `KOBOLD_SIGNING_PASSPHRASE` from
+a secret manager; never put the passphrase in source, commands or build logs.
+
+After the exact archive is tested, fill its acceptance record and use
+`package_release.py promote`. Promotion changes signed metadata and preserves the
+bootstrap, recovery and collector archives. Missing checks or archive mismatches
+are refused. It does not deploy or access a reader.
+
+The manual `release-pages.yml` workflow downloads `KoBOLD-0.1.0-site.zip` from a
+GitHub release, validates its supplied SHA256, refuses unsafe ZIP entries, and
+verifies repository-trusted signatures and acceptance before deploying the same
+static files. It does not rebuild or receive a private signing key.
+
+Use `node tools/verify_site.mjs SITE --production` locally before release upload.
+Keep an encrypted off-device backup of the signer and a recoverable copy of its
+passphrase in an owner-controlled secret manager. Losing the key prevents signing
+future updates trusted by installed readers.

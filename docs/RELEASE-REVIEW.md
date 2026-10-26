@@ -1,7 +1,8 @@
 # Release review: KoBOLD 0.1.0
 
-Prepared for owner review. No upload, GitHub push, Pages deployment or reader change
-is authorised by this document.
+Documentation and source publication approved by the owner on 2026-10-26.
+Production packaging is in preparation. Exact-package hardware acceptance and
+installer activation remain pending. No reader changes are performed by packaging.
 
 ## Public contents
 
@@ -38,8 +39,8 @@ or constitute hardware acceptance. Keep candidate metadata non-installable.
 6. Approve the clean initial commit and GitHub release assets.
 7. Approve upload and manual Pages deployment separately.
 
-Production profile acceptance is currently false and production trust lists are
-empty. Do not change either to bypass unfinished release review. Packaging tests
+Production profile acceptance is currently false. Public verification keys are
+configured; the encrypted private signer is held outside the repository. Do not change either to bypass unfinished release review. Packaging tests
 and owner-reported hardware results must be recorded separately.
 
 ## Deployment plan
@@ -47,11 +48,25 @@ and owner-reported hardware results must be recorded separately.
 Push only the reviewed clean `main` snapshot. Upload immutable reviewed release
 assets and corresponding sources. Deploy only a verified static bundle using the
 manual Pages workflow and the `github-pages` environment. Source pushes alone must
-not deploy. The existing preview workflow publishes a non-installing preview and
-must not be described as the live installer.
+not deploy. The separate preview workflow publishes a non-installing preview and
+must not be described as the live installer. `release-pages.yml` deploys only an
+authenticated accepted site ZIP with its reviewed checksum.
 
 A deployable installer bundle must have approved production keys, accepted profile,
 authenticated manifests and complete source/licence material. The reviewed archive
 and its SHA256, not a rebuild with changed inputs, are the deployment unit. Record
 the final Pages URL and check asset fetches and browser capability gating after
 activation. Keep the previous static artifact available for rollback.
+
+## Prepared production key
+
+Key ID: `kobold-release-2026`. Raw Ed25519 public-key SHA256:
+`b5c1bac10f799b7450dcabc0454c62c568548de1ad26c25696bc9da768289d88`.
+
+The private PEM is encrypted outside the repository. Its passphrase is held in the
+owner’s macOS Keychain. An off-device encrypted key backup remains an owner action
+before stable release. GitHub and Pages receive only the public verification keys.
+
+The staged attended package is not public installation acceptance. Record its exact
+bootstrap and collector hashes after the supported flow succeeds, then promote the
+same archives. Ordinary source publication does not activate this package.
