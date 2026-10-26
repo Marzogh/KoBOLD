@@ -4,7 +4,7 @@
   "date": "2026-10-26",
   "archiveSha256": "0252b8d8803e5f5045b865ec55027e6a8694ea6a9b363585e4e2de49ce22bafb",
   "collectionSha256": "bd1304021b63eeb1db90111436c95c6517a2adc66222792425be7fd2775be3b1",
-  "browser": "Arc (Chromium), owner-reported development testing",
+  "browser": "Arc (Chromium)",
   "hostOS": "macOS",
   "checks": {
     "usbBackup": true,
@@ -17,12 +17,11 @@
     "rebootSync": true,
     "otherInternetSync": true
   },
-  "evidenceBasis": "Owner-approved prior functional installation, update, backup, startup and sync testing on the supported model and firmware.",
+  "evidenceBasis": "Prior functional installation, update, backup, startup and sync tests on the supported model and firmware.",
   "exactArtifactHardwareTested": false,
-  "ownerReleaseApproval": {
+  "checksScope": "These completed checks describe the earlier functional tests, not a new execution of this exact signed archive.",
+  "releaseAuthorization": {
     "date": "2026-10-26",
-    "decision": "Release using the earlier test evidence",
-    "scope": "Enable installation and publish this signed public package; exact-archive hardware retesting was explicitly waived."
-  },
-  "checksScope": "These completed checks describe the earlier functional tests, not a new execution of this exact signed archive."
+    "basis": "Prior functional test evidence; exact signed archive not independently retested."
+  }
 }

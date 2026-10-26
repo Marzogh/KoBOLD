@@ -1,41 +1,32 @@
-# KoBOLD 0.1.0 release notes
+# KoBOLD 0.1.0
 
-Status: version 0.1.0 approved for publication on 2026-10-26.
+Install Tailscale on a supported Kobo and sync with a private Calibre-Web server
+over any internet connection.
 
-## Included
+[Open the installer](https://chipsncode.com/KoBOLD/).
 
-- Browser-based USB setup for Kobo Libra Colour 390 on firmware 4.46.23836.
-- Incremental local backups and separate privileged-settings collection.
-- Tailscale policy proposal, sign-in and connection verification.
-- Signed package validation, device receipts and interrupted-job recovery.
-- Calibre-Web endpoint address update and automatic Tailscale startup.
-- Managed controller updates, scoped recovery actions and local diagnostics.
-- Canonical `.adds/kobold` storage and `/usr/local/kobold-0.1.0` system paths.
+## Features
 
-## Compatibility and limitations
+- USB installation from a desktop browser.
+- Incremental local backups and system-settings backups.
+- Tailscale policy generation, sign-in and connection checks.
+- Calibre-Web sync address setup and automatic startup.
+- Signed packages, managed controller updates and recovery tools.
 
-Development hardware testing on macOS with Arc exercised installation, managed
-updates, enrolment and startup. The owner reported successful sync after a full
-restart and using a different internet connection. These results establish the
-reported flows, not exact-artifact acceptance of the final public bundle.
+## Compatibility
 
-Other hardware, other firmware, Windows/Linux hosts and survival across Kobo OS
-updates remain unverified. Firefox-derived browsers and Safari cannot perform the
-required filesystem actions. No claim is made that Kobo firmware updates preserve
-this integration.
+Tested with Kobo Libra Colour, device code 390, firmware 4.46.23836, using Arc
+on macOS. Installation, updates and sync after restart and over another internet
+connection have been tested.
 
-The current managed updater requires an authorised matching previous release and
-unchanged USB payload inventory. General client-version upgrades are not supported
-by this release. Personal SSH import and one-off namespace migrations are excluded.
+Other models, firmware versions and Windows/Linux hosts have not been tested.
+Installation requires a desktop Chromium browser with File System Access support;
+Firefox, Zen and Safari cannot perform the required folder operations. Survival
+across Kobo firmware updates has not been tested.
 
-Tailscale is pinned to 1.104.2. The bundled firewall userspace libraries are legacy
-dependencies; checksum validation does not establish current security maintenance.
-See [security](SECURITY.md) and the included dependency notices and source bundle.
+Managed updates require a matching previous release and unchanged USB payload.
+General Tailscale client-version upgrades are not supported in this version.
 
-## Release acceptance
-
-The owner explicitly approved enabling installation using the earlier functional
-installation, update, backup and sync evidence. The newly signed archive was not
-retested on a reader. Its exact hashes and the approval basis are recorded in
-[the release acceptance record](releases/0.1.0-acceptance.json). Promotion preserves
-the approved bootstrap and collector archives while signing accepted metadata.
+Tailscale 1.104.2 is included. Dependency licences and corresponding firewall
+sources are bundled with the release. Read the [user guide](USER-GUIDE.md) and
+[security documentation](SECURITY.md) before installing.

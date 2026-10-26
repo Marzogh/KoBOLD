@@ -5,10 +5,8 @@ Calibre-Web server over any internet connection. Setup runs in a desktop browser
 and transfers files over USB. No public Calibre-Web endpoint or hosted application
 backend is required.
 
-**Version 0.1.0 is approved for release.** Use the installer at
-[KoBOLD](https://chipsncode.com/KoBOLD/). The owner accepted the public package
-using earlier functional tests; this newly signed archive was not separately
-retested on a reader. See the [acceptance record](docs/releases/0.1.0-acceptance.json).
+[Open the installer](https://chipsncode.com/KoBOLD/) or read the
+[user guide](docs/USER-GUIDE.md).
 
 ## Requirements
 
@@ -49,8 +47,7 @@ Use the update flow for a recognised KoBOLD installation and the exact release
 that authorises its previous version. It preserves the enrolled Tailscale identity
 and saves recovery records. The current updater covers matching managed controller
 updates; arbitrary Tailscale payload upgrades and firmware changes require further
-support and testing. Personal import and one-off development migration tools are
-not part of the public distribution.
+support and testing. 
 
 ## Documentation
 

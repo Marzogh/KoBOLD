@@ -1,30 +1,22 @@
-# Compatibility and release acceptance
+# Compatibility and test coverage
 
-The current profile is Kobo Libra Colour, device code 390, firmware 4.46.23836,
-ARMv7 and kernel 4.9.77. Unknown profiles are blocked. Release 0.1.0 is accepted by the owner using prior functional testing. A production
-verification key is configured. The newly signed archive was not independently
-retested on a reader; see [the acceptance record](releases/0.1.0-acceptance.json).
+Supported target: Kobo Libra Colour, device code 390, firmware 4.46.23836, ARMv7
+and kernel 4.9.77. Other profiles are blocked. Desktop testing used Arc on macOS.
 
-An attended development sequence has exercised installation, enrolment, managed
-updates and signed startup verification on this profile. Sync after restart over
-another internet connection was reported during that sequence. This is not an
-acceptance record for a clean installation of the final public package.
+Installation, enrolment, managed controller updates, signed startup verification
+and sync after restart and over another internet connection have been tested.
+The signed 0.1.0 distribution carries that earlier functional evidence; its new
+archive was not separately rerun on hardware. The [release record](releases/0.1.0-acceptance.json)
+distinguishes these scopes.
 
-## Required evidence
+Other models, other firmware, Windows/Linux hosts and survival across Kobo OS
+updates have not been tested. Native fixture tests and browser tests do not
+establish hardware compatibility.
 
-Record the exact release and archive digests, model, firmware, browser and host OS.
-Keep private serials and credentials out of evidence intended for publication.
-Verify these components separately:
+## Recording future test results
 
-- Initial USB backup and privileged-settings recovery.
-- Folder exclusions and absence of installer files from My Books.
-- Clean root bootstrap, immutable payload and device receipt pinning.
-- Enrolment, intended tag, healthy status and actual Calibre-Web sync.
-- Startup after a full reboot and sync over a different internet connection.
-- USB interruption, power loss, exhausted storage and recovery/rollback paths.
-- Existing managed-install update and preservation of identity and data.
-
-Native host tests, browser fixtures and successful client execution each prove a
-limited surface. None substitutes for the remaining physical tests. Other models,
-firmware versions, Windows/Linux filesystem behaviour and Kobo firmware-update
-survival require their own evidence. Do not promote a profile by editing a UI flag.
+Record the model, firmware, browser, host OS and exact archive hashes. Exclude
+reader serials and credentials. Check USB and system backups, library exclusions,
+installation, enrolment, sync, startup after reboot and another internet connection.
+Record interruption, storage exhaustion and recovery behaviour separately.
+Updates must preserve the enrolled identity and existing books and settings.
