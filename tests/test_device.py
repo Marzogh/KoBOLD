@@ -158,11 +158,7 @@ class BuildTests(unittest.TestCase):
         version.parent.mkdir()
         version.write_text('N428-FAKE,4.9.77,4.46.23836,x,y,000000000390')
         host = self.root / 'host-provenance'
-        go = (
-            os.environ.get('KOBOLD_GO')
-            or shutil.which('go')
-            or str(ROOT / 'cache/toolchain/go/bin/go')
-        )
+        go = builder.go_toolchain()
         env = {
             **os.environ,
             'GOTOOLCHAIN': 'local',

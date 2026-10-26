@@ -111,12 +111,17 @@ def signed(data, key, trust):
         return dest.read_bytes()
 
 
-def helper(root):
-    """Cross-compile the fixed ARM helper; do not run it on the build host."""
+def go_toolchain():
+    """Use one toolchain selection for native tests and ARM release builds."""
     pinned = ROOT / 'cache/toolchain/go/bin/go'
-    go = os.environ.get('KOBOLD_GO') or (
+    return os.environ.get('KOBOLD_GO') or (
         str(pinned) if pinned.is_file() else shutil.which('go') or str(pinned)
     )
+
+
+def helper(root):
+    """Cross-compile the fixed ARM helper; do not run it on the build host."""
+    go = go_toolchain()
     with tempfile.TemporaryDirectory() as temp:
         output = Path(temp) / 'provenance'
         subprocess.run(
