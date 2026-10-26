@@ -68,6 +68,7 @@
     "docs/SESSION-RECOVERY.md",
     "docs/USER-GUIDE.md",
     "docs/WIZARD.md",
+    "docs/releases/0.1.0-acceptance.json",
     "package.json",
     "publication/files.json",
     "ruff.toml",

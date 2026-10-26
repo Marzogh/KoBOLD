@@ -70,3 +70,11 @@ before stable release. GitHub and Pages receive only the public verification key
 The staged attended package is not public installation acceptance. Record its exact
 bootstrap and collector hashes after the supported flow succeeds, then promote the
 same archives. Ordinary source publication does not activate this package.
+
+## Activation decision, 2026-10-26
+
+The owner explicitly approved releasing the package using prior successful tests,
+with the new exact signed archive not separately hardware-tested. This approval
+supersedes the pending extra-test step above. The signed acceptance record states
+that limitation and binds the package and collector hashes. It does not manufacture
+an exact-archive test result. Public installation and Pages deployment are authorised.

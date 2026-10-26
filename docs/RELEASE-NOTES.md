@@ -1,6 +1,6 @@
 # KoBOLD 0.1.0 release notes
 
-Status: release preparation, not published.
+Status: version 0.1.0 approved for publication on 2026-10-26.
 
 ## Included
 
@@ -32,8 +32,10 @@ Tailscale is pinned to 1.104.2. The bundled firewall userspace libraries are leg
 dependencies; checksum validation does not establish current security maintenance.
 See [security](SECURITY.md) and the included dependency notices and source bundle.
 
-## Before public installation is enabled
+## Release acceptance
 
-Approve documentation, signing custody, compatibility scope and the exact release
-manifest. Record final package acceptance without copying evidence from a different
-archive. Production trust and bootstrap acceptance remain disabled during review.
+The owner explicitly approved enabling installation using the earlier functional
+installation, update, backup and sync evidence. The newly signed archive was not
+retested on a reader. Its exact hashes and the approval basis are recorded in
+[the release acceptance record](releases/0.1.0-acceptance.json). Promotion preserves
+the approved bootstrap and collector archives while signing accepted metadata.

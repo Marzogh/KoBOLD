@@ -5,8 +5,10 @@ Calibre-Web server over any internet connection. Setup runs in a desktop browser
 and transfers files over USB. No public Calibre-Web endpoint or hosted application
 backend is required.
 
-**Release status: 0.1.0 is being prepared for review. The public installer is not
-live.** The production signer is configured. Exact-package installation acceptance is pending.
+**Version 0.1.0 is approved for release.** Use the installer at
+[KoBOLD](https://chipsncode.com/KoBOLD/). The owner accepted the public package
+using earlier functional tests; this newly signed archive was not separately
+retested on a reader. See the [acceptance record](docs/releases/0.1.0-acceptance.json).
 
 ## Requirements
 
